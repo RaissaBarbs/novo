@@ -13,10 +13,16 @@
     <title>CoderCarrer</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 </head>
 <body>
     <header>
         <br />
+        <br />
+
+        <a href="#top" class="button-fixed">
+           <img src="~/css/seta.png" alt="seta" height="25" width="25">
+        </a>
         <div class="row">
 
             @foreach (var vaga in Model)
@@ -26,15 +32,17 @@
                         <div class="card-body">
                             <h5 class="card-title">@vaga.titulo | @vaga.empresa</h5>
                             <p class="card-text">@vaga.salario</p>
-                            <p class="card-text">@vaga.descricao_vaga</p>
-                            <a href="@vaga.url" class="btn btn-primary" target="_blank">Ir para Link</a>
+                            <p class="card-text">
+                                     <img src="~/css/trabalho.png" alt="icon" height="20" width="20">
+                                @vaga.descricao_vaga</p>
+                            <a href="@vaga.url"  target="_blank"> <button class="buttonA">Ir para Link</button></a>
                         </div>
                     </div>
                 </div>
                 <br>
             }
 
-            <button id="load-more" class="btn btn-primary">Carregar mais</button>
+            <button id="load-more" class="~buttonA">Carregar mais</button>
         </div>
 
     </header>
