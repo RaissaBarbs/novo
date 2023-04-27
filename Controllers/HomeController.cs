@@ -18,6 +18,11 @@ namespace CoderCarrer.Controllers
             _logger = logger;
         }
 
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
         public async Task<IActionResult> Index()
         {
             IExtratorVaga vagasDao = new TrabalhaBrasilDAO();
